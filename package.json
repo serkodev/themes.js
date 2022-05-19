@@ -1,12 +1,12 @@
 {
-  "name": "ts-template",
+  "name": "vanilla-themes",
   "version": "0.0.0",
   "packageManager": "pnpm@7.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/antfu/ts-template#readme",
+  "homepage": "https://github.com/serkodev/ts-template#readme",
   "bugs": {
-    "url": "https://github.com/antfu/ts-template/issues"
+    "url": "https://github.com/serkodev/ts-template/issues"
   },
   "author": "SerKo (http://github.com/serkodev)",
   "license": "MIT",
