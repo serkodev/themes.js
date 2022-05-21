@@ -23,19 +23,15 @@ class Theme {
   private storageKey = 'theme'
 
   constructor(theme?: string) {
-    if (theme) {
-      this.theme = theme
-    } else {
-      this.theme = null
-    }
+    this.theme = theme || null
   }
 
   // localStorage
-  private loadTheme(): string | undefined {
+  private loadTheme(): string | null {
     try {
-      const theme = localStorage.getItem(this.storageKey)
-      return theme || undefined
+      return localStorage.getItem(this.storageKey)
     } catch (e) {}
+    return null
   }
 
   private observeStorage() {
@@ -46,7 +42,7 @@ class Theme {
       if (e.key !== this.storageKey) {
         return
       }
-      this.setTheme(e.newValue || undefined)
+      this.setTheme(e.newValue)
     }
     window.addEventListener('storage', handler)
     this.removeStorageListenerFunc = () => {
@@ -88,25 +84,23 @@ class Theme {
   }
 
   private applyTheme(theme: string) {
-    if (theme === this.documentTheme)
-      return
-
-    const e = document.documentElement
-    if (e.classList.contains(this.documentTheme)) {
-      e.classList.remove(this.documentTheme)
+    if (theme !== this.documentTheme) {
+      const e = document.documentElement
+      if (e.classList.contains(this.documentTheme)) {
+        e.classList.remove(this.documentTheme)
+      }
+      e.classList.add(theme)
+      this.documentTheme = theme
     }
-    e.classList.add(theme)
-    this.documentTheme = theme
-
     if (this.onChange) {
       this.onChange(theme)
     }
   }
 
-  private setTheme(theme = 'auto') {
+  private setTheme(theme: string | null) {
     this._theme = theme
 
-    if (theme === 'auto') {
+    if (!theme || theme === 'auto') {
       this.observe()
     } else {
       // remove if needed
@@ -125,12 +119,8 @@ class Theme {
   set theme(theme: string | null) {
     this._theme = theme
 
-    if (!theme) {
-      this.sync = true
-    } else {
-      this.sync = false
-      this.setTheme(theme)
-    }
+    this.sync = !theme
+    this.setTheme(theme)
   }
 
   get sync() {
