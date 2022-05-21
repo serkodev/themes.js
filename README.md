@@ -24,7 +24,7 @@ pnpm i vanilla-themes
 CDN
 
 ```html
-<script src="https://unpkg.com/vanilla-themes"></script>
+<script type="module" src="https://unpkg.com/vanilla-themes"></script>
 ```
 
 ## Quick start
@@ -52,8 +52,10 @@ const themes = new Themes()
 
 ### CDN
 
-```js
-const themes = new window.Themes()
+```html
+<script type="module">
+  new window.Themes()
+</script>
 ```
 
 ## Usage
