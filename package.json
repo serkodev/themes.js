@@ -1,18 +1,18 @@
 {
   "name": "vanilla-themes",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@7.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/serkodev/ts-template#readme",
+  "homepage": "https://github.com/serkodev/vanilla-themes#readme",
   "bugs": {
-    "url": "https://github.com/serkodev/ts-template/issues"
+    "url": "https://github.com/serkodev/vanilla-themes/issues"
   },
   "author": "SerKo (http://github.com/serkodev)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/serkodev/ts-template.git"
+    "url": "git+https://github.com/serkodev/vanilla-themes.git"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
