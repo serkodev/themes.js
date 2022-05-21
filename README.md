@@ -24,7 +24,7 @@ pnpm i vanilla-themes
 CDN
 
 ```html
-<script type="module" src="https://unpkg.com/vanilla-themes"></script>
+<script src="https://unpkg.com/vanilla-themes"></script>
 ```
 
 ## Quick start
@@ -46,16 +46,14 @@ Auto Dark / Light and auto localStorage sync theme by default
 
 ```js
 import Themes from 'vanilla-themes'
-
 const themes = new Themes()
 ```
 
 ### CDN
 
 ```html
-<script type="module">
-  new window.Themes()
-</script>
+<script src="https://unpkg.com/vanilla-themes"></script>
+<script>new window.Themes()</script>
 ```
 
 ## Usage
