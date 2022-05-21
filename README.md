@@ -3,8 +3,8 @@
 A super lightweight and fast Theme library with auto system color scheme detection in JavaScript.
 
 [![Latest Release](https://badgen.net/npm/v/themes.js)](https://www.npmjs.com/package/themes.js)
-[![Package Size](https://badgen.net/badgesize/brotli/https://cdn.jsdelivr.net/npm/themes.js?icon=jsdelivr&label&color=yellow)](https://unpkg.com/themes.js 'brotli package size (without dependencies)')
-[![MIT License](https://badgen.net/github/license/serkodev/themes.js?color=yellow)](https://github.com/master-co/css/blob/main/LICENSE)
+[![Package Size](https://badgen.net/badgesize/brotli/https://cdn.jsdelivr.net/npm/themes.js?icon=jsdelivr&label)](https://unpkg.com/themes.js 'brotli package size (without dependencies)')
+[![MIT License](https://badgen.net/github/license/serkodev/themes.js)](https://github.com/master-co/css/blob/main/LICENSE)
 
 ## Features
 
