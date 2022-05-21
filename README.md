@@ -127,7 +127,7 @@ pnpm i
 Playground
 
 ```
-pnpm --filter ./playground dev
+pnpm dev
 ```
 
 ## Inspiration

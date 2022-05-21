@@ -35,6 +35,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "pnpm --filter ./playground dev",
     "build": "tsup",
     "watch": "tsup --watch",
     "lint": "eslint .",
