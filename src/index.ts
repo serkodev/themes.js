@@ -9,7 +9,7 @@ const getSystemTheme = (e?: MediaQueryList | MediaQueryListEvent) => {
   return systemTheme
 }
 
-class Theme {
+class Themes {
   _theme: string | null = null
 
   // sync with other window with same localstorage
@@ -156,4 +156,14 @@ class Theme {
   }
 }
 
-export default Theme
+declare global {
+  interface Window {
+    Themes: typeof Themes
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.Themes = Themes
+}
+
+export default Themes

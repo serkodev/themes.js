@@ -11,29 +11,25 @@ Theme library with auto system color scheme detection in JavaScript.
 
 ## Install
 
+Package Manager
+
 ```
 npm i vanilla-themes
-```
 
-```
 yarn add vanilla-themes
+
+pnpm i vanilla-themes
 ```
 
-```
-pnpm i vanilla-themes
+CDN
+
+```html
+<script src="https://unpkg.com/vanilla-themes"></script>
 ```
 
 ## Quick start
 
-Auto Dark / Light and auto localStorage sync theme by default
-
-```js
-import Themes from 'vanilla-themes'
-
-const themes = new Themes()
-```
-
-CSS
+Prepare CSS
 
 ```css
 .light body {
@@ -42,6 +38,22 @@ CSS
 .dark body {
   background-color: black;
 }
+```
+
+Auto Dark / Light and auto localStorage sync theme by default
+
+### ESM
+
+```js
+import Themes from 'vanilla-themes'
+
+const themes = new Themes()
+```
+
+### CDN
+
+```js
+const themes = new window.Themes()
 ```
 
 ## Usage

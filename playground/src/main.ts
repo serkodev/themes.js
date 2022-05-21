@@ -1,8 +1,7 @@
 import './style.css'
-import Themes from '../../src/index'
+import '../../src/index'
 
-// eslint-disable-next-line no-new
-const themes = new Themes()
+const themes = new window.Themes()
 
 const themeForm = (document.getElementsByName('themeForm')[0]) as HTMLFormElement
 
