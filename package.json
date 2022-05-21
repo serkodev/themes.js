@@ -1,17 +1,17 @@
 {
-  "name": "vanilla-themes",
+  "name": "themes.js",
   "version": "0.0.7",
   "license": "MIT",
   "author": "SerKo (http://github.com/serkodev)",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/serkodev/vanilla-themes#readme",
+  "homepage": "https://github.com/serkodev/themes.js#readme",
   "bugs": {
-    "url": "https://github.com/serkodev/vanilla-themes/issues"
+    "url": "https://github.com/serkodev/themes.js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/serkodev/vanilla-themes.git"
+    "url": "git+https://github.com/serkodev/themes.js.git"
   },
   "main": "./dist/index.global.js",
   "module": "./dist/index.mjs",

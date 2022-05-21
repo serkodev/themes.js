@@ -1,4 +1,4 @@
-# vanilla-themes
+# themes.js
 
 Theme library with auto system color scheme detection in JavaScript.
 
@@ -14,17 +14,17 @@ Theme library with auto system color scheme detection in JavaScript.
 Package Manager
 
 ```
-npm i vanilla-themes
+npm i themes.js
 
-yarn add vanilla-themes
+yarn add themes.js
 
-pnpm i vanilla-themes
+pnpm i themes.js
 ```
 
 CDN
 
 ```html
-<script src="https://unpkg.com/vanilla-themes"></script>
+<script src="https://unpkg.com/themes.js"></script>
 ```
 
 ## Quick start
@@ -45,14 +45,14 @@ Auto Dark / Light and auto localStorage sync theme by default
 ### ESM
 
 ```js
-import Themes from 'vanilla-themes'
+import Themes from 'themes.js'
 const themes = new Themes()
 ```
 
 ### CDN
 
 ```html
-<script src="https://unpkg.com/vanilla-themes"></script>
+<script src="https://unpkg.com/themes.js"></script>
 <script>new window.Themes()</script>
 ```
 
