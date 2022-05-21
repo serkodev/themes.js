@@ -8,8 +8,8 @@
   "bugs": {
     "url": "https://github.com/serkodev/vanilla-themes/issues"
   },
-  "author": "SerKo (http://github.com/serkodev)",
   "license": "MIT",
+  "author": "SerKo (http://github.com/serkodev)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/serkodev/vanilla-themes.git"
