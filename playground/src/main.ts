@@ -7,7 +7,7 @@ const themes = new Themes()
 const themeForm = (document.getElementsByName('themeForm')[0]) as HTMLFormElement
 
 const updateStatus = () => {
-  themeForm.theme.value = themes.theme
+  themeForm.theme.value = themes.theme || 'auto'
   themeForm.sync.checked = themes.sync
 }
 
@@ -30,6 +30,12 @@ themeForm.theme.forEach((input: HTMLElement) => {
 themeForm.sync.addEventListener('change', (e: Event) => {
   const sync = (e.target as HTMLInputElement).checked
   themes.sync = sync
+  updateStatus()
+})
+
+themeForm.btnRemove.addEventListener('click', () => {
+  themes.theme = null
+  themes.commit()
   updateStatus()
 })
 
