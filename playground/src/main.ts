@@ -4,11 +4,33 @@ import Themes from '../../src/index'
 // eslint-disable-next-line no-new
 const themes = new Themes()
 
-const handleThemeSelected = (e: Event) => {
-  const theme = (e.target as HTMLInputElement).value
-  themes.setTheme(theme)
+const themeForm = (document.getElementsByName('themeForm')[0]) as HTMLFormElement
+
+const updateStatus = () => {
+  themeForm.theme.value = themes.theme
+  themeForm.sync.checked = themes.sync
 }
 
-document.querySelectorAll('input[name=\'theme\']').forEach((input) => {
-  input.addEventListener('change', handleThemeSelected)
+themes.onChange = () => {
+  updateStatus()
+}
+
+themeForm.theme.forEach((input: HTMLElement) => {
+  input.addEventListener('change', (e: Event) => {
+    const theme = (e.target as HTMLInputElement).value
+    const sync = themeForm.sync.checked
+    themes.theme = theme
+    if (sync) {
+      themes.commit()
+    }
+    updateStatus()
+  })
 })
+
+themeForm.sync.addEventListener('change', (e: Event) => {
+  const sync = (e.target as HTMLInputElement).checked
+  themes.sync = sync
+  updateStatus()
+})
+
+updateStatus()

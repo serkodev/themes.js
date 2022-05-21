@@ -11,10 +11,14 @@
 <body>
   <div id="app">
     <h1>Theme</h1>
-    <input type="radio" name="theme" value="auto" checked />Auto
-    <input type="radio" name="theme" value="light" />Light
-    <input type="radio" name="theme" value="dark" />Dark
-    <input type="radio" name="theme" value="custom" />Custom
+    <form name="themeForm">
+      <input type="radio" name="theme" value="auto" />Auto
+      <input type="radio" name="theme" value="light" />Light
+      <input type="radio" name="theme" value="dark" />Dark
+      <input type="radio" name="theme" value="custom" />Custom
+      <br />
+      <input type="checkbox" name="sync" />Sync
+    </form>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
