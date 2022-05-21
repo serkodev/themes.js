@@ -1,6 +1,6 @@
 {
   "name": "vanilla-themes",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@7.0.0",
   "description": "",
   "keywords": [],
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/serkodev/vanilla-themes.git"
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
