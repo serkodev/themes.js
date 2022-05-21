@@ -40,7 +40,7 @@
     "watch": "tsup --watch",
     "lint": "eslint .",
     "start": "tsx ./src/index.ts",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm lint && pnpm build",
     "release": "bump --commit --push --tag && npm publish"
   },
   "devDependencies": {
