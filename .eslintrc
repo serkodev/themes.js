@@ -1,5 +1,6 @@
 {
   "extends": "@antfu",
+  "ignorePatterns": "**/*.json",
   "rules": {
     "no-console": "off",
     "curly": "off",

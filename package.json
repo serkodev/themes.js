@@ -40,8 +40,8 @@
     "watch": "tsup --watch",
     "lint": "eslint .",
     "start": "tsx ./src/index.ts",
-    "prepublishOnly": "pnpm lint && pnpm build",
-    "release": "bump --commit --push --tag && npm publish"
+    "prepublishOnly": "pnpm build",
+    "release": "pnpm lint && bump --commit --push --tag && npm publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
