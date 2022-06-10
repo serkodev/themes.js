@@ -22,15 +22,25 @@ class Themes {
   private documentTheme = ''
   private storageKey = 'theme'
 
-  constructor(theme?: string) {
-    this.theme = theme || null
+  constructor(config?: {
+    theme?: string,
+    storageKey?: string,
+    sync?: boolean,
+  } | string) {
+    if (typeof config === 'string') {
+      this.theme = config || null;
+    } else {
+      this.theme = config?.theme || null;
+      this.storageKey = config?.storageKey || this.storageKey;
+      this.sync = config?.sync || false;
+    }
   }
 
   // localStorage
   private loadTheme(): string | null {
     try {
       return localStorage.getItem(this.storageKey)
-    } catch (e) {}
+    } catch (e) { }
     return null
   }
 
@@ -150,7 +160,7 @@ class Themes {
       } else {
         localStorage.removeItem(this.storageKey)
       }
-    } catch (e) {}
+    } catch (e) { }
 
     this.sync = sync
   }
