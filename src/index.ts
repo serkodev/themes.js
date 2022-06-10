@@ -23,16 +23,16 @@ class Themes {
   private storageKey = 'theme'
 
   constructor(config?: {
-    theme?: string,
-    storageKey?: string,
-    sync?: boolean,
+    theme?: string
+    storageKey?: string
+    sync?: boolean
   } | string) {
     if (typeof config === 'string') {
-      this.theme = config || null;
+      this.theme = config || null
     } else {
-      this.theme = config?.theme || null;
-      this.storageKey = config?.storageKey || this.storageKey;
-      this.sync = config?.sync || false;
+      this.theme = config?.theme || null
+      this.storageKey = config?.storageKey || this.storageKey
+      this.sync = config?.sync || false
     }
   }
 
