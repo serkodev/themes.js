@@ -113,6 +113,18 @@ themes.commit()
 // themes.sync = true [auto]
 ```
 
+### Configs
+
+You can pass `theme`, `storageKey` or `sync` config when initialize.
+
+```js
+const themes = new Themes({
+  theme: 'dark', // (optional) default: null
+  storageKey: 'theme', // (optional) default: 'theme'
+  sync: true, // (optional) default: false
+})
+```
+
 ### Events
 
 ```js
